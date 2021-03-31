@@ -1,0 +1,56 @@
+server:
+  port: 80
+  servlet:
+    context-path: /
+
+############################# 数据库连接 #############################
+spring:
+  #cpk
+#  idms:
+#    UserPin: 11111111
+#    PubMatrix: changji-gssac.com.pkm
+#    VKeyFile: GSSAC-CHJ.vkd
+#    sign: sac
+  datasource:
+    url: jdbc:p6spy:mysql://192.168.4.202:12345/clms_cps_dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: bochtec@2018
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+#  kafka:
+#    listener:
+#      concurrency: 3
+#    consumer:
+#      bootstrap-servers: 192.168.21.171:9092,192.168.21.70:9092,192.168.21.122:9092
+#      max-poll-records: 10
+#      auto-offset-reset: latest
+#    topic:
+#      throughout: 1
+#      assets: assets
+#      audit-events: audit-events
+#      events: event
+#      it-vul: it-vul
+#############################kafka es#############################
+#---
+#spring:
+#  data:
+#    elasticsearch:
+#      hosts: 192.168.21.87:9200,192.168.21.140:9200,192.168.21.134:9200
+
+############################# 数据库密码加密 #############################
+
+############################# 日志等级 #############################
+logging:
+  level:
+    root: info
+
+mybatis:
+  type-aliases-package: com.bochtec.platform.domain
+

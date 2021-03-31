@@ -1,0 +1,15 @@
+server:
+  port: 80
+  servlet:
+    context-path: /
+spring:
+  datasource:
+    #    url: jdbc:p6spy:mysql://192.168.4.202:12345/clms_cps_dev?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8&MultiQueries=true
+    #    username: root
+    #    password: bochtec@2018
+#    多sql拼接方式 &MultiQueries=true
+    url: jdbc:mysql://192.168.21.234:3306/KMS_test?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&useSSL=false&zeroDateTimeBehavior=convertToNull&serverTimezone=GMT%2B8
+    username: root
+    password: Bochtec@2018
+
+
